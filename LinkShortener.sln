@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkShortener", "LinkShortener\LinkShortener.csproj", "{D5193F7A-A0EF-41DA-AEF7-67D964C2DE0E}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{AF234621-9CAC-463F-ABB8-8DDA74B7E0BE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7F52729E-DC2F-4D8C-9912-938EBD2C51EE}"
+	ProjectSection(SolutionItems) = preProject
+		prometheus\alert.rules = prometheus\alert.rules
+		grafana\config.monitoring = grafana\config.monitoring
+		prometheus\prometheus.yml = prometheus\prometheus.yml
+	EndProjectSection
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "reactfrontend", "..\ReactFrontend\reactfrontend.esproj", "{BBAD82D1-82B5-4F04-BEA8-0B61775148C5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D5193F7A-A0EF-41DA-AEF7-67D964C2DE0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5193F7A-A0EF-41DA-AEF7-67D964C2DE0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5193F7A-A0EF-41DA-AEF7-67D964C2DE0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5193F7A-A0EF-41DA-AEF7-67D964C2DE0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF234621-9CAC-463F-ABB8-8DDA74B7E0BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF234621-9CAC-463F-ABB8-8DDA74B7E0BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF234621-9CAC-463F-ABB8-8DDA74B7E0BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF234621-9CAC-463F-ABB8-8DDA74B7E0BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBAD82D1-82B5-4F04-BEA8-0B61775148C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBAD82D1-82B5-4F04-BEA8-0B61775148C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBAD82D1-82B5-4F04-BEA8-0B61775148C5}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BBAD82D1-82B5-4F04-BEA8-0B61775148C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBAD82D1-82B5-4F04-BEA8-0B61775148C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBAD82D1-82B5-4F04-BEA8-0B61775148C5}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {92780375-B932-460B-9CB6-68EAE1C6BEC8}
+	EndGlobalSection
+EndGlobal

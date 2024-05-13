@@ -1,0 +1,6 @@
+@LinkShortener_HostAddress = http://localhost:5001
+
+GET {{LinkShortener_HostAddress}}/metrics
+Accept: application/json
+
+###
