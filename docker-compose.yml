@@ -105,6 +105,8 @@ services:
     image: linkshortener.react
     container_name: linkshortener.react
     ports:
-      - "5173:80"
+      - "5173:5173"
+    environment:
+      - WATCHPACK_POLLING=true
     depends_on: 
-        - linkshortener
+      - linkshortener

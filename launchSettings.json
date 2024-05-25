@@ -3,8 +3,18 @@
     "Docker Compose": {
       "commandName": "DockerCompose",
       "commandVersion": "1.0",
+      "composeLaunchAction": "LaunchBrowser",
+      "composeLaunchServiceName": "linkshortener",
+      "composeLaunchUrl": "{Scheme}://localhost:{ServicePort}/swagger",
       "serviceActions": {
-        "linkshortener": "StartDebugging"
+        "linkshortener": "StartDebugging",
+        "cadvisor": "StartWithoutDebugging",
+        "grafana": "StartWithoutDebugging",
+        "linkshortener.cache": "StartWithoutDebugging",
+        "linkshortener.db": "StartWithoutDebugging",
+        "node-exporter": "StartWithoutDebugging",
+        "prometheus": "StartWithoutDebugging",
+        "react-frontend": "StartWithoutDebugging"
       }
     }
   }
