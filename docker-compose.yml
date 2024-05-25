@@ -106,5 +106,5 @@ services:
     container_name: linkshortener.react
     ports:
       - "5173:80"
-    #depends_on: 
-    #    - linkshortener
+    depends_on: 
+        - linkshortener
