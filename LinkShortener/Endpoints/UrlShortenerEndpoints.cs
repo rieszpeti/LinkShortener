@@ -57,6 +57,8 @@ namespace LinkShortener.Endpoints
 
                 await cache.SetStringAsync(shortenUrlRequest.Url, shortenedUrl.ShortUrl, cacheEntryOptions, ct).ConfigureAwait(false);
 
+                await cache.SetStringAsync(shortenedUrl.Code, shortenedUrl.Code, cacheEntryOptions, ct).ConfigureAwait(false);
+
                 return Results.Ok(shortenedUrl.ShortUrl);
             });
 
@@ -69,37 +71,18 @@ namespace LinkShortener.Endpoints
                     //ILogger logger,
                     CancellationToken ct) =>
                 {
-#pragma warning disable S125
-                    var uri = System.Net.WebUtility.UrlDecode(code);
-                    //logger.LogDecodeUrl(uri);
+                    var shortenedUrl = await cache.GetAsync(code,
+                        async token =>
+                                {
+                                    var shortenedUrl = await dbContext
+                                        .ShortenedUrls
+                                        .SingleOrDefaultAsync(s => s.Code == code, ct)
+                                        .ConfigureAwait(false);
 
-                    if (uri is null)
-                    {
-                        return Results.NotFound("URL is invalid!");
-                    }
-                    if (!Uri.TryCreate(uri, UriKind.Absolute, out _))
-                    {
-                        return Results.BadRequest("The specified URL is invalid.");
-                    }
-
-                    //var shortenedUrl = await cache.GetAsync(uri,
-                    //    async token =>
-                    //            {
-                    //                var shortenedUrl = await dbContext
-                    //                    .ShortenedUrls
-                    //                    .SingleOrDefaultAsync(s => s.LongUrl == uri, ct)
-                    //                    .ConfigureAwait(false);
-
-                    //                return shortenedUrl;
-                    //            },
-                    //    CacheOptions.DefaultExpiration,
-                    //    ct).ConfigureAwait(false);
-
-                    var shortenedUrl = await dbContext
-                        .ShortenedUrls
-                        .SingleOrDefaultAsync(s => s.LongUrl == uri, ct)
-                        .ConfigureAwait(false);
-#pragma warning restore S125
+                                    return shortenedUrl;
+                                },
+                        CacheOptions.DefaultExpiration,
+                        ct).ConfigureAwait(false);
 
                     if (shortenedUrl is null)
                     {
