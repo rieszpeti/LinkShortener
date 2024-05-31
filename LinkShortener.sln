@@ -7,13 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkShortener", "LinkShorte
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{AF234621-9CAC-463F-ABB8-8DDA74B7E0BE}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7F52729E-DC2F-4D8C-9912-938EBD2C51EE}"
-	ProjectSection(SolutionItems) = preProject
-		prometheus\alert.rules = prometheus\alert.rules
-		grafana\config.monitoring = grafana\config.monitoring
-		prometheus\prometheus.yml = prometheus\prometheus.yml
-	EndProjectSection
-EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "reactfrontend", "..\ReactFrontend\reactfrontend.esproj", "{BBAD82D1-82B5-4F04-BEA8-0B61775148C5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B32FF7CE-921F-4BAF-BA31-21FCC5E69364}"

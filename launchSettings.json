@@ -8,13 +8,9 @@
       "composeLaunchUrl": "{Scheme}://localhost:{ServicePort}/swagger",
       "serviceActions": {
         "linkshortener": "StartDebugging",
-        "cadvisor": "StartWithoutDebugging",
-        "grafana": "StartWithoutDebugging",
         "linkshortener.cache": "StartWithoutDebugging",
         "linkshortener.db": "StartWithoutDebugging",
-        "node-exporter": "StartWithoutDebugging",
-        "prometheus": "StartWithoutDebugging",
-        "react-frontend": "StartWithoutDebugging"
+        "linkshortener.frontend": "StartWithoutDebugging"
       }
     }
   }
