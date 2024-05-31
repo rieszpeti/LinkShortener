@@ -56,7 +56,7 @@ namespace LinkShortener.Extensions
                 options.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
-                    Title = "Image Processing API",
+                    Title = "LinkShortener API",
                     Description = "An ASP.NET Core Web API to Shorten Links",
                     TermsOfService = new Uri("https://example.com/terms"),
                     Contact = new OpenApiContact
