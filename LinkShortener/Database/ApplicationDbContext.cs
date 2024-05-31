@@ -1,8 +1,6 @@
 ﻿using LinkShortener.Entities;
-using LinkShortener.Utilities;
+using LinkShortener.Options;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
-using System.Reflection.Emit;
 
 namespace LinkShortener.Database
 {

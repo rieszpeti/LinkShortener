@@ -1,4 +1,4 @@
-﻿namespace LinkShortener.Utilities
+﻿namespace LinkShortener.Options
 {
     public static class ShortLinkSettings
     {

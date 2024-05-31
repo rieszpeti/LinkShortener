@@ -1,5 +1,5 @@
 ﻿using LinkShortener.Database;
-using LinkShortener.Utilities;
+using LinkShortener.Options;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Cryptography;
 
