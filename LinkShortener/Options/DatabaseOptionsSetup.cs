@@ -14,11 +14,11 @@ namespace LinkShortener.Options
 
         public void Configure(DatabaseOptions options)
         {
-            ArgumentNullException.ThrowIfNull(nameof(options));
+            ArgumentNullException.ThrowIfNull(options);
 
             var connectionString = _configuration.GetConnectionString("Database");
 
-            ArgumentNullException.ThrowIfNullOrWhiteSpace(nameof(connectionString));
+            ArgumentNullException.ThrowIfNullOrWhiteSpace(connectionString);
 
             options.ConnectionString = connectionString;
 
